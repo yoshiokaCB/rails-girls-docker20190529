@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.6
 # FROM ruby:2.5.3-slim-stretch
 
 RUN apt-get update && \
