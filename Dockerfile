@@ -1,4 +1,4 @@
-FROM ruby:2.6
+FROM ruby:2.6.2
 # FROM ruby:2.5.3-slim-stretch
 
 RUN apt-get update && \
@@ -9,8 +9,12 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*;
 WORKDIR /myapp
-COPY Gemfile /myapp/Gemfile
-COPY Gemfile.lock /myapp/Gemfile.lock
-
-RUN bundle install
 COPY . /myapp
+COPY ./entrypoint.sh /
+RUN chmod +x /entrypoint.sh && \
+    bundle install
+
+EXPOSE 3000
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["rails", "server", "-b", "0.0.0.0"]
