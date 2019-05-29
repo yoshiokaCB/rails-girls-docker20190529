@@ -1,16 +1,24 @@
-# Rails Development Base
+# README
 
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Description
+Things you may want to cover:
 
-Build Rails + Postgresql development environment using Docker Compose
+* Ruby version
 
-## Usage
+* System dependencies
 
-```
-$ git clone https://github.com/yoshiokaCB/rails-development-base.git ./[app-name]
-$ cd [app-name]
-$ docker-compose build
-$ docker-compose run web rails new . --force -d postgresql
-```
+* Configuration
 
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
