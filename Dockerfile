@@ -1,5 +1,4 @@
-FROM ruby:2.6.2
-# FROM ruby:2.5.3-slim-stretch
+FROM ruby:2.6.3
 
 RUN apt-get update && \
     : "必要ライブラリーのインストール" && \
